@@ -12,42 +12,51 @@
 <body>
 
     <section class="container">
-        <h1>Tabela IMC</h1>
+        <h1>Cálculo IMC</h1>
+        <p>IMC é a sigla para <b>Índice de Massa Corpórea</b>, parâmetro adotado pela Organização Mundial de Saúde para
+        calcular o peso ideal de cada pessoa.<br><br>
+        O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.
+        Diz-se que o indivíduo tem o peso ideal quando o resultado do IMC está entre 18,5 e 24,9.<br><br>
+        Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.
+        Importante: siga os exemplos e use pontos como separadores.<br><br></p>
+
+        <div class="calculadora">
+            <h2>Calcule seu IMC</h2>
+
+            <form id="formulario" action="calcular-imc">
+                <label for="peso">Insira o seu peso:</label>
+                <input type="number" name="peso" id="peso" step="0.01" placeholder="(ex.: 69,2)">
+
+                <label for="altura">Insira sua altura:</label>
+                <input type="number" name="altura" id="altura" step="0.01" placeholder="(ex.: 1,80 ou 180)">
+
+                <button>Calcular</button>
+
+            </form>
+        </div>
+        <h2>Tabela IMC</h2>
         <div class="flex-container">
+            
             <div>
                 <h2>IMC</h2>
-                <div>Menor do que 18.5</div>
-                <div>Entre 18.5 e 24.9</div>
-                <div>Entre 25 e 29.9</div>
-                <div>Entre 30 e 34.9</div>
-                <div>Entre 35 e 39.9</div>
-                <div>Maior do que 40</div>
+                <div>Menor do que <b>18.5</b></div>
+                <div>Entre <b>18.5 e 24.9</b></div>
+                <div>Entre <b>25 e 29.9</b></div>
+                <div>Entre <b>30 e 34.9</b></div>
+                <div>Entre <b>35 e 39.9</b></div>
+                <div>Maior <b>do que 40</b></div>
 
             </div>
 
             <div>
                 <h2>Resultado</h2>
-                <div>Abaixo do peso</div>
-                <div>Peso normal</div>
+                <div>Abaixo do peso ideal</div>
+                <div>Peso ideal</div>
                 <div>Sobrepeso</div>
                 <div>Obesidade grau 1</div>
                 <div>Obesidade grau 2</div>
                 <div>Obesidade grau 3</div>
             </div>
-        </div>
-        <div class="calculadora">
-            <h2>Calcule seu IMC</h2>
-
-            <form id="formulario" action="calcular-imc">
-                <label for="peso">Peso:</label>
-                <input type="number" name="peso" id="peso" step="0.01">
-
-                <label for="altura">Altura:</label>
-                <input type="number" name="altura" id="altura" step="0.01">
-
-                <button>Calcular</button>
-
-            </form>
         </div>
 
         <div id="resultado"></div>

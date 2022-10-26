@@ -5,8 +5,10 @@ form.addEventListener('submit', function (enviar) { // adicionou evento no formu
     let inputPeso = enviar.target.querySelector("#peso"); // capturou os dados dos inputs
     let inputAltura = enviar.target.querySelector("#altura"); // capturou os dados dos inputs
 
+    
     const peso = Number(inputPeso.value); // converteu os dados obtidos dos inputs
     const altura = Number(inputAltura.value); // converteu os dados obtidos dos inputs
+
 
     // testa se retorna com NaN e apresenta o resultado peso invalido
 
@@ -42,6 +44,10 @@ function getNivelImc(imc) {
 }
 
 function getImc(peso, altura) { // função criada para obter o calcula do IMC;
+    if (altura > 100) {
+        altura = altura / 100; // caso seja digitado altura em CM, converte para metros e não da erro no programa.
+    }
+    
     const imc = peso / (altura * altura);
     return imc.toFixed(2);
 }
